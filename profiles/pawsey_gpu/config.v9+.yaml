@@ -12,7 +12,6 @@
 cluster-generic-submit-cmd: mkdir -p logs/slurm/{rule} &&
   sbatch
   {resources.partitionFlag}
-  --export=TF_CUDNN_WORKSPACE_LIMIT_IN_MB={resources.TF_CUDNN_WORKSPACE_LIMIT_IN_MB}
   --account=${GPU_ACCOUNT}
   --gpus-per-task={resources.gpu}
   --gres=gpu:{resources.gpu}
