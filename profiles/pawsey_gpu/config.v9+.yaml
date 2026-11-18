@@ -27,7 +27,7 @@ default-resources:
 set-resources:
   tiberius:
     gpu: "attempt + 1"
-    runtime: "60 if attempt==1 else 1440"
+    runtime: "2h"
 # 2. The Pawsey Tiberius container OOMs with containall so we override
 #    `singularity-args` (note the official Tiberius container works fine with
 #    containall).
